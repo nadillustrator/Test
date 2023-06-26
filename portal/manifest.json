@@ -1,0 +1,21 @@
+{
+  "number": 1,
+  "Service": "portal",
+  "entities": [
+    {
+      "name": "Portal",
+      "kind": "portal",
+      "path": "entities/records_management_/portal.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "",
+      "history": null,
+      "resources": [
+        {
+          "kind": "settingValues",
+          "path": "resources/records_management_/settings.json"
+        }
+      ]
+    }
+  ]
+}

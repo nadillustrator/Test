@@ -1,0 +1,12 @@
+{
+  "Namespace": "records_management_",
+  "Code": "business_trips",
+  "settings": {
+    "accessType": "none",
+    "__permissions": {
+      "inheritParent": false,
+      "values": []
+    }
+  },
+  "groups": []
+}

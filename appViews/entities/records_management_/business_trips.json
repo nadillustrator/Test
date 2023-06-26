@@ -1,0 +1,1661 @@
+{
+  "__id": "2cf99d4e-8fda-5fb3-ad72-d1ab2604aa90",
+  "name": "Командировки",
+  "elementName": "Командировка",
+  "namespace": "records_management_",
+  "code": "business_trips",
+  "type": "STANDARD",
+  "fields": [
+    {
+      "code": "__directory",
+      "type": "CATEGORY",
+      "searchable": false,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "fields": [
+          {
+            "code": "name",
+            "data": null,
+            "type": "STRING",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          },
+          {
+            "code": "parent",
+            "data": null,
+            "type": "STRING",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          },
+          {
+            "code": "level",
+            "data": null,
+            "type": "INTEGER",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          },
+          {
+            "code": "sort",
+            "data": null,
+            "type": "INTEGER",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          }
+        ]
+      },
+      "view": {
+        "name": "Папка в иерархии",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "__externalProcessMeta",
+      "type": "JSON",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Данные внешних процессов",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "additionalType": "object"
+        }
+      }
+    },
+    {
+      "code": "__externalId",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Внешний идентификатор",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "our_company",
+      "type": "SYS_COLLECTION",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": true,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "code": "_my_companies",
+        "filter": {
+          "value": {
+            "tf": {}
+          },
+          "enabled": false
+        },
+        "namespace": "_system_catalogs"
+      },
+      "view": {
+        "name": "Наша организация",
+        "tooltip": "Выберите организацию",
+        "data": {}
+      }
+    },
+    {
+      "code": "emloyee",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": true,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "filter": {
+          "value": {
+            "tf": {}
+          },
+          "enabled": false
+        }
+      },
+      "view": {
+        "name": "Командируемый",
+        "sort": 1,
+        "data": {}
+      }
+    },
+    {
+      "code": "city",
+      "type": "STRING",
+      "searchable": true,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Город",
+        "sort": 2,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "trip_reason",
+      "type": "STRING",
+      "searchable": true,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Цель поездки",
+        "sort": 3,
+        "data": {
+          "additionalType": "text"
+        }
+      }
+    },
+    {
+      "code": "start_date",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Дата начала поездки",
+        "sort": 4,
+        "tooltip": "Укажите дату начала поездки",
+        "data": {
+          "timeOptional": false,
+          "additionalType": "date",
+          "defaultTimeType": "startOfDay"
+        }
+      }
+    },
+    {
+      "code": "end_date",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Дата окончания поездки",
+        "sort": 5,
+        "tooltip": "Укажите дату окончания поездки",
+        "data": {
+          "timeOptional": false,
+          "additionalType": "date",
+          "defaultTimeType": "startOfDay"
+        }
+      }
+    },
+    {
+      "code": "need_tickets",
+      "type": "BOOLEAN",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": true,
+      "defaultValue": false,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Требуется покупка билетов?",
+        "sort": 6,
+        "tooltip": "Выберите нужный вариант",
+        "data": {
+          "noValue": "Не требуется",
+          "yesValue": "Требуется",
+          "additionalType": "radio"
+        }
+      }
+    },
+    {
+      "code": "trip_report",
+      "type": "FILE",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Отчет",
+        "sort": 7,
+        "tooltip": "Прикрепите файл с отчетом",
+        "data": {}
+      }
+    },
+    {
+      "code": "passport",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Паспорт",
+        "sort": 8,
+        "tooltip": "Укажите серию и номер паспорта. Для зарубежной поездки укажите данные ЗАГРАНИЧНОГО паспорта",
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "ticketsComment",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Комментарий",
+        "sort": 9,
+        "tooltip": "Оставьте комментарий для офис-менеджера по покупке билетов: откуда, куда, желаемые даты, ссылки на выбранные билеты",
+        "data": {
+          "additionalType": "text"
+        }
+      }
+    },
+    {
+      "code": "daily_allowance",
+      "type": "MONEY",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": {
+        "cents": 70000,
+        "currency": "RUB"
+      },
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Суточные",
+        "sort": 10,
+        "data": {
+          "currency": "RUB"
+        }
+      }
+    },
+    {
+      "code": "duration",
+      "type": "FLOAT",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Длительность командировки",
+        "sort": 11,
+        "data": {
+          "additionalType": "integer",
+          "showRowSeparator": true
+        }
+      }
+    },
+    {
+      "code": "sum_daily_allowance",
+      "type": "MONEY",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "$daily_allowance*$duration",
+      "data": {},
+      "view": {
+        "name": "Сумма суточных",
+        "sort": 12,
+        "data": {
+          "currency": "RUB"
+        }
+      }
+    },
+    {
+      "code": "client_or_partner",
+      "type": "SYS_COLLECTION",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "code": "_companies",
+        "filter": {
+          "value": {
+            "tf": {
+              "_address": {
+                "context": "city"
+              }
+            }
+          },
+          "enabled": true
+        },
+        "namespace": "_clients"
+      },
+      "view": {
+        "name": "К клиенту/партнеру",
+        "sort": 13,
+        "data": {}
+      }
+    },
+    {
+      "code": "fill_report",
+      "type": "BOOLEAN",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": false,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Заполнить отчет?",
+        "sort": 14,
+        "data": {
+          "noValue": "Нет",
+          "yesValue": "Да",
+          "additionalType": "radio"
+        }
+      }
+    },
+    {
+      "code": "info",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Информация",
+        "sort": 15,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "chief",
+      "type": "SYS_USER",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "filter": {
+          "value": {
+            "tf": {}
+          },
+          "enabled": false
+        }
+      },
+      "view": {
+        "name": "Согласующий руководитель",
+        "sort": 16,
+        "data": {}
+      }
+    },
+    {
+      "code": "__name",
+      "type": "STRING",
+      "searchable": true,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Название",
+        "system": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "__id",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Идентификатор",
+        "system": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "__index",
+      "type": "FLOAT",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Индекс",
+        "system": true,
+        "data": {
+          "additionalType": "integer"
+        }
+      }
+    },
+    {
+      "code": "__tasks",
+      "type": "JSON",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Задачи",
+        "system": true,
+        "hidden": true
+      }
+    },
+    {
+      "code": "__tasks_earliest_duedate",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Срок выполнения ближайшей задачи",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__tasks_performers",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Исполнители",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__debug",
+      "type": "BOOLEAN",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Режим отладки",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "noValue": "no",
+          "yesValue": "yes"
+        }
+      }
+    },
+    {
+      "code": "__createdAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата создания",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__createdBy",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Автор",
+        "system": true
+      }
+    },
+    {
+      "code": "__updatedAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата изменения",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__updatedBy",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Редактор",
+        "system": true
+      }
+    },
+    {
+      "code": "__deletedAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата удаления",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__status",
+      "type": "STATUS",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Статус",
+        "system": true
+      }
+    }
+  ],
+  "filters": null,
+  "settings": {
+    "status": {
+      "items": [
+        {
+          "id": 1,
+          "code": "pending_approval",
+          "data": null,
+          "name": "На согласовании",
+          "color": "",
+          "actions": null,
+          "groupId": "00000000-0000-0000-0000-000000000000",
+          "readonly": false,
+          "isFinished": false,
+          "isNegative": false,
+          "jumpMethod": "NEXT",
+          "hideFromBoard": false,
+          "jumpToStatuses": [],
+          "backgroundColor": ""
+        },
+        {
+          "id": 2,
+          "code": "approved",
+          "data": null,
+          "name": "Согласована",
+          "color": "",
+          "actions": null,
+          "groupId": "00000000-0000-0000-0000-000000000000",
+          "readonly": false,
+          "isFinished": false,
+          "isNegative": false,
+          "jumpMethod": "NEXT",
+          "hideFromBoard": false,
+          "jumpToStatuses": [],
+          "backgroundColor": ""
+        },
+        {
+          "id": 3,
+          "code": "ongoing",
+          "data": null,
+          "name": "Текущая",
+          "color": "",
+          "actions": null,
+          "groupId": "00000000-0000-0000-0000-000000000000",
+          "readonly": false,
+          "isFinished": false,
+          "isNegative": false,
+          "jumpMethod": "NEXT",
+          "hideFromBoard": false,
+          "jumpToStatuses": [],
+          "backgroundColor": ""
+        },
+        {
+          "id": 4,
+          "code": "denied",
+          "data": null,
+          "name": "Отклонена",
+          "color": "",
+          "actions": null,
+          "groupId": "00000000-0000-0000-0000-000000000000",
+          "readonly": false,
+          "isFinished": true,
+          "isNegative": false,
+          "jumpMethod": "NEXT",
+          "hideFromBoard": true,
+          "jumpToStatuses": [],
+          "backgroundColor": ""
+        },
+        {
+          "id": 5,
+          "code": "finished",
+          "data": null,
+          "name": "Завершена",
+          "color": "",
+          "actions": null,
+          "groupId": "00000000-0000-0000-0000-000000000000",
+          "readonly": false,
+          "isFinished": true,
+          "isNegative": false,
+          "jumpMethod": "NEXT",
+          "hideFromBoard": true,
+          "jumpToStatuses": [],
+          "backgroundColor": ""
+        }
+      ],
+      "groups": [
+        {
+          "id": "00000000-0000-0000-0000-000000000000",
+          "code": "__default",
+          "flow": {
+            "code": "",
+            "type": "manual",
+            "fieldCode": "",
+            "namespace": "",
+            "forwardOnly": false
+          },
+          "name": "",
+          "permissions": {
+            "values": null,
+            "timestamp": 0,
+            "inheritParent": false
+          }
+        }
+      ],
+      "nextId": 6,
+      "enabled": true,
+      "manualChange": false,
+      "transitionLog": false
+    },
+    "docflow": {
+      "excludeFields": [],
+      "excludeAllFields": true,
+      "excludeSystemFields": false
+    },
+    "listCard": {
+      "width": "md",
+      "places": ["emloyee", "our_company", "city"],
+      "showTasks": false,
+      "expandCard": true,
+      "displaySystemInfo": true
+    },
+    "signature": {
+      "userAccess": [],
+      "excludeFields": [],
+      "excludeSystemFields": true
+    },
+    "userGuide": {
+      "text": ""
+    },
+    "dirsSettings": {
+      "enabled": false
+    },
+    "listSettings": {
+      "sort": {
+        "field": "",
+        "direction": ""
+      },
+      "limit": 10,
+      "buttons": [
+        {
+          "id": "60c1e6b5-ac67-48e7-981c-d5bcbb3b03e9",
+          "code": "create",
+          "type": "primary",
+          "label": "+ Командировка",
+          "bindings": [],
+          "immutable": false,
+          "silentRun": false,
+          "permission": "create",
+          "processCode": "",
+          "processField": "",
+          "defaultValues": {},
+          "useSimpleForm": false,
+          "deleteSettings": null,
+          "simpleFormSize": "default",
+          "allowedGroupIds": [],
+          "allowedStatusIds": [],
+          "processNamespace": "",
+          "processLinkChanged": false,
+          "showForAllowedStatuses": false,
+          "showForAllowedStatusGroups": false
+        }
+      ],
+      "aggregateField": "",
+      "autoUpdateCards": false,
+      "enabledMassActions": false
+    },
+    "massSettings": {
+      "buttons": [
+        {
+          "id": "9517769f-5f14-405c-8318-f911c567a9e9",
+          "code": "edit",
+          "type": "menu-item",
+          "label": "Редактировать",
+          "bindings": [],
+          "immutable": false,
+          "silentRun": false,
+          "permission": "update",
+          "processCode": "",
+          "processField": "",
+          "defaultValues": null,
+          "useSimpleForm": false,
+          "deleteSettings": null,
+          "simpleFormSize": "default",
+          "allowedGroupIds": [],
+          "allowedStatusIds": [],
+          "processNamespace": "",
+          "processLinkChanged": false,
+          "showForAllowedStatuses": false,
+          "showForAllowedStatusGroups": false
+        },
+        {
+          "id": "52fc77a3-2964-45c5-814f-a92ad4c892bc",
+          "code": "delete",
+          "type": "menu-item",
+          "label": "Удалить",
+          "bindings": [],
+          "immutable": false,
+          "silentRun": false,
+          "permission": "delete",
+          "processCode": "",
+          "processField": "",
+          "defaultValues": null,
+          "useSimpleForm": false,
+          "deleteSettings": {
+            "deleteMethod": "delete",
+            "deleteStatus": 0,
+            "commentIsRequried": false
+          },
+          "simpleFormSize": "default",
+          "allowedGroupIds": [],
+          "allowedStatusIds": [],
+          "processNamespace": "",
+          "processLinkChanged": false,
+          "showForAllowedStatuses": false,
+          "showForAllowedStatusGroups": false
+        }
+      ]
+    },
+    "nameSettings": {
+      "titleTemplate": "Командировка №{$__index}. {$emloyee.fullname.lastname}. {$city}. с {$start_date} по {$end_date}",
+      "titleGenerateMethod": "template"
+    },
+    "viewSettings": {
+      "buttons": [
+        {
+          "id": "9b4ba717-5174-473b-95ec-8009fbebc8ca",
+          "code": "edit",
+          "type": "primary",
+          "label": "Редактировать",
+          "bindings": [],
+          "immutable": false,
+          "silentRun": false,
+          "permission": "update",
+          "processCode": "",
+          "processField": "",
+          "defaultValues": null,
+          "useSimpleForm": false,
+          "deleteSettings": null,
+          "simpleFormSize": "default",
+          "allowedGroupIds": [],
+          "allowedStatusIds": [],
+          "processNamespace": "",
+          "processLinkChanged": false,
+          "showForAllowedStatuses": false,
+          "showForAllowedStatusGroups": false
+        }
+      ]
+    },
+    "advancedForms": {
+      "edit": {
+        "fields": [
+          {
+            "code": "__name",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "our_company",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "emloyee",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "city",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "client_or_partner",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "trip_reason",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "start_date",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "end_date",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "duration",
+            "readonly": true,
+            "required": false,
+            "hideEmpty": true,
+            "subfields": null
+          },
+          {
+            "code": "sum_daily_allowance",
+            "readonly": true,
+            "required": false,
+            "hideEmpty": true,
+            "subfields": null
+          },
+          {
+            "code": "need_tickets",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "passport",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "ticketsComment",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "trip_report",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          }
+        ],
+        "widgetCode": "_edit",
+        "useTemplate": false,
+        "templateLink": ""
+      },
+      "tile": {
+        "fields": [],
+        "widgetCode": "",
+        "useTemplate": false,
+        "templateLink": ""
+      },
+      "view": {
+        "fields": [
+          {
+            "code": "our_company",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "emloyee",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "city",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "client_or_partner",
+            "data": {
+              "createButtonId": "",
+              "showCreateItem": true,
+              "showSelectItem": true
+            },
+            "readonly": true,
+            "required": false,
+            "hideEmpty": true,
+            "subfields": null
+          },
+          {
+            "code": "trip_reason",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "start_date",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "end_date",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "duration",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "sum_daily_allowance",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "need_tickets",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "passport",
+            "readonly": true,
+            "required": false,
+            "hideEmpty": true,
+            "subfields": null
+          },
+          {
+            "code": "ticketsComment",
+            "readonly": true,
+            "required": false,
+            "hideEmpty": true,
+            "subfields": null
+          },
+          {
+            "code": "trip_report",
+            "readonly": true,
+            "required": false,
+            "subfields": null
+          }
+        ],
+        "widgetCode": "_view",
+        "useTemplate": false,
+        "templateLink": ""
+      },
+      "create": {
+        "fields": [
+          {
+            "code": "__name",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "our_company",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "emloyee",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "city",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "client_or_partner",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "trip_reason",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "start_date",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "end_date",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "duration",
+            "readonly": true,
+            "required": false,
+            "hideEmpty": true,
+            "subfields": null
+          },
+          {
+            "code": "sum_daily_allowance",
+            "readonly": true,
+            "required": false,
+            "hideEmpty": true,
+            "subfields": null
+          },
+          {
+            "code": "need_tickets",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "passport",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "ticketsComment",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "trip_report",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          }
+        ],
+        "widgetCode": "_create",
+        "useTemplate": false,
+        "templateLink": ""
+      },
+      "enabled": true,
+      "massEdit": {
+        "fields": [
+          {
+            "code": "__name",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "our_company",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "emloyee",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "city",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "trip_reason",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          },
+          {
+            "code": "start_date",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "end_date",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "need_tickets",
+            "readonly": false,
+            "required": true,
+            "subfields": null
+          },
+          {
+            "code": "trip_report",
+            "readonly": false,
+            "required": false,
+            "subfields": null
+          }
+        ],
+        "enabled": false,
+        "widgetCode": "",
+        "useTemplate": false,
+        "templateLink": ""
+      },
+      "fieldVisibilityConditions": {
+        "__id": {
+          "enabled": false,
+          "conditions": []
+        },
+        "city": {
+          "enabled": false,
+          "conditions": []
+        },
+        "info": {
+          "enabled": false,
+          "conditions": []
+        },
+        "chief": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__name": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__debug": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__index": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__tasks": {
+          "enabled": false,
+          "conditions": []
+        },
+        "emloyee": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__status": {
+          "enabled": false,
+          "conditions": []
+        },
+        "duration": {
+          "enabled": false,
+          "conditions": []
+        },
+        "end_date": {
+          "enabled": false,
+          "conditions": []
+        },
+        "passport": {
+          "enabled": true,
+          "conditions": [
+            {
+              "a": {
+                "kind": "context",
+                "value": "need_tickets"
+              },
+              "b": {
+                "kind": "manual",
+                "value": true
+              },
+              "type": "BOOLEAN",
+              "inversion": false,
+              "operation": {
+                "relation": "equal",
+                "inversion": false,
+                "caseInsensitive": false
+              },
+              "conjunction": false
+            }
+          ]
+        },
+        "start_date": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__createdAt": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__createdBy": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__deletedAt": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__directory": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__updatedAt": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__updatedBy": {
+          "enabled": false,
+          "conditions": []
+        },
+        "fill_report": {
+          "enabled": false,
+          "conditions": []
+        },
+        "our_company": {
+          "enabled": false,
+          "conditions": []
+        },
+        "trip_reason": {
+          "enabled": false,
+          "conditions": []
+        },
+        "trip_report": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__externalId": {
+          "enabled": false,
+          "conditions": []
+        },
+        "need_tickets": {
+          "enabled": false,
+          "conditions": []
+        },
+        "ticketsComment": {
+          "enabled": true,
+          "conditions": [
+            {
+              "a": {
+                "kind": "context",
+                "value": "need_tickets"
+              },
+              "b": {
+                "kind": "manual",
+                "value": true
+              },
+              "type": "BOOLEAN",
+              "inversion": false,
+              "operation": {
+                "relation": "equal",
+                "inversion": false,
+                "caseInsensitive": false
+              },
+              "conjunction": false
+            }
+          ]
+        },
+        "daily_allowance": {
+          "enabled": false,
+          "conditions": []
+        },
+        "dialy_allowance": {
+          "enabled": false,
+          "conditions": []
+        },
+        "client_or_partner": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__tasks_performers": {
+          "enabled": false,
+          "conditions": []
+        },
+        "sum_daily_allowance": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__externalProcessMeta": {
+          "enabled": false,
+          "conditions": []
+        },
+        "__tasks_earliest_duedate": {
+          "enabled": false,
+          "conditions": []
+        }
+      }
+    },
+    "indexSettings": {
+      "serialCode": "__default",
+      "serialNamespace": "records_management_.business_trips"
+    },
+    "tableSettings": {
+      "displayFields": ["__name"]
+    },
+    "createSettings": {
+      "buttons": [
+        {
+          "id": "c0466f00-ffb0-4bab-b3bd-6eee8cdda81c",
+          "code": "save",
+          "type": "primary",
+          "label": "Сохранить",
+          "bindings": [],
+          "immutable": false,
+          "silentRun": false,
+          "permission": null,
+          "processCode": "business_trip",
+          "processField": "business_trips",
+          "defaultValues": null,
+          "useSimpleForm": false,
+          "deleteSettings": null,
+          "simpleFormSize": "default",
+          "allowedGroupIds": [],
+          "allowedStatusIds": [],
+          "processNamespace": "records_management_.business_trips",
+          "processLinkChanged": true,
+          "showForAllowedStatuses": false,
+          "showForAllowedStatusGroups": false
+        },
+        {
+          "id": "11a818bb-1dbe-4078-bfc5-9b37528b7904",
+          "code": "cancel",
+          "type": "default",
+          "label": "Отмена",
+          "bindings": [],
+          "immutable": true,
+          "silentRun": false,
+          "permission": null,
+          "processCode": "",
+          "processField": "",
+          "defaultValues": null,
+          "useSimpleForm": false,
+          "deleteSettings": null,
+          "simpleFormSize": "default",
+          "allowedGroupIds": [],
+          "allowedStatusIds": [],
+          "processNamespace": "",
+          "processLinkChanged": false,
+          "showForAllowedStatuses": false,
+          "showForAllowedStatusGroups": false
+        }
+      ]
+    },
+    "feederSettings": {
+      "onCreateElementEnabled": false
+    },
+    "defaultFilterId": null,
+    "documentSettings": {
+      "pathId": "",
+      "printFormSettings": {
+        "downloadPrintForm": false,
+        "watermarkTemplates": [],
+        "isWatermarksEnabled": false
+      }
+    },
+    "registrationSettings": {
+      "enabled": false,
+      "orgunitIdModel": [],
+      "nomenclatureIds": [],
+      "restrictRegistration": "",
+      "preliminaryReservationSettings": {
+        "enabled": false,
+        "nomenclatureIds": []
+      }
+    }
+  },
+  "__createdAt": "2022-09-13T07:06:56.034652191Z",
+  "__updatedAt": "2022-09-14T11:23:40.224912865Z",
+  "__deletedAt": null,
+  "__createdBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__updatedBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a"
+}

@@ -1,0 +1,19 @@
+{
+  "__id": "dedbe714-175c-5692-9cbf-0defc3afaf92",
+  "namespace": "records_management_.absence",
+  "code": "__default",
+  "version": 1,
+  "name": "График отсутствий",
+  "nextValue": 2,
+  "settings": {
+    "useReleased": true,
+    "iterationStep": 1,
+    "sequence": true
+  },
+  "apps": null,
+  "__createdAt": "2022-09-13T12:39:13.913988Z",
+  "__updatedAt": "2022-09-13T12:39:13.913988Z",
+  "__deletedAt": null,
+  "__createdBy": "6f0a6450-48ab-4e40-98c2-97154e119f5e",
+  "__updatedBy": "6f0a6450-48ab-4e40-98c2-97154e119f5e"
+}

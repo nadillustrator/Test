@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+
+msgctxt ".__name"
+msgid "Форма просмотра"
+msgstr "Форма просмотра"
+
+msgctxt ".descriptor.template.content.[content][0].content.[0].content.[0].values.title"
+msgid "Основное"
+msgstr "Основное"
+
+msgctxt ".descriptor.template.content.[content][0].content.[0].content.[1].values.title"
+msgid "Отчет"
+msgstr "Отчет"
+
+msgctxt ".descriptor.template.content.[headerControls][2].values.label"
+msgid "Права доступа"
+msgstr "Права доступа"

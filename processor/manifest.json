@@ -1,0 +1,34 @@
+{
+  "number": 1,
+  "Service": "processor",
+  "entities": [
+    {
+      "name": "Оформление командировки",
+      "kind": "template",
+      "path": "entities/records_management_.business_trips/business_trip.json",
+      "description": "",
+      "namespace": "records_management_.business_trips",
+      "code": "business_trip",
+      "history": [
+        {
+          "version": "4250f1ac-d277-46bb-85a0-044f21a7e680",
+          "updatedAt": "2022-09-13T08:30:29.985765496Z"
+        },
+        {
+          "version": "b0db82e3-d00e-455a-b852-c9c47b3c0d26",
+          "updatedAt": "2022-09-14T12:40:49.825154911Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "po",
+          "path": "resources/records_management_.business_trips/business_trip.po"
+        },
+        {
+          "kind": "runtime",
+          "path": "resources/records_management_.business_trips/business_trip.runtime"
+        }
+      ]
+    }
+  ]
+}

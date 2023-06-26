@@ -1,0 +1,17 @@
+{
+  "__id": "aa6d3ec0-1964-51e4-849b-9f71be7f5511",
+  "namespace": "records_management_",
+  "code": "fdd5b67f-6f46-4e3b-8d51-77a5bfe423d2",
+  "__name": "Бухгалтер",
+  "description": "",
+  "isDefault": false,
+  "isRole": true,
+  "privileges": ["system"],
+  "subOrgunitIds": null,
+  "__createdAt": "2022-09-13T08:28:56.962063458Z",
+  "__updatedAt": "2022-09-13T08:41:35.945469341Z",
+  "__deletedAt": null,
+  "__createdBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__updatedBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "integration": null
+}

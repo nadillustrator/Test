@@ -1,0 +1,26 @@
+{
+  "number": 1,
+  "Service": "main.groups",
+  "entities": [
+    {
+      "name": "Офис-менеджер",
+      "kind": "group",
+      "path": "entities/records_management_/0b5aa4cf-598c-4711-b0ce-0fc41ab07805.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "0b5aa4cf-598c-4711-b0ce-0fc41ab07805",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "Бухгалтер",
+      "kind": "group",
+      "path": "entities/records_management_/fdd5b67f-6f46-4e3b-8d51-77a5bfe423d2.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "fdd5b67f-6f46-4e3b-8d51-77a5bfe423d2",
+      "history": null,
+      "resources": null
+    }
+  ]
+}

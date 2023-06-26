@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+
+msgctxt ".__name"
+msgid "Оформление командировки"
+msgstr "Оформление командировки"
+
+msgctxt ".context[0].view.name"
+msgid "Командировка"
+msgstr "Командировка"
+
+msgctxt ".context[1].view.name"
+msgid "Руководитель"
+msgstr "Руководитель"
+
+msgctxt ".context[2].view.data.noValue"
+msgid "Нет"
+msgstr "Нет"
+
+msgctxt ".context[2].view.data.yesValue"
+msgid "Да"
+msgstr "Да"
+
+msgctxt ".context[2].view.name"
+msgid "Требуется покупка билетов?"
+msgstr "Требуется покупка билетов?"
+
+msgctxt ".context[3].view.name"
+msgid "Дата начала поездки"
+msgstr "Дата начала поездки"
+
+msgctxt ".context[4].view.name"
+msgid "Офис-менеджер"
+msgstr "Офис-менеджер"
+
+msgctxt ".context[5].view.name"
+msgid "Бухгалетр"
+msgstr "Бухгалетр"
+
+msgctxt ".context[6].view.name"
+msgid "Отсутствие"
+msgstr "Отсутствие"
+
+msgctxt ".process.items.00000000-0000-0000-0000-000000000000.settings.formFields[0].display"
+msgid "Название"
+msgstr "Название"
+
+msgctxt ".process.items.00000000-0000-0000-0000-000000000000.settings.formFields[0].tooltip"
+msgid "Название экземпляра процесса, будет показываться в задачах"
+msgstr "Название экземпляра процесса, будет показываться в задачах"
+
+msgctxt ".process.items.00000000-0000-0000-0000-000000000000.settings.notifyMessage"
+msgid "Запущен процесс"
+msgstr "Запущен процесс"
+
+msgctxt ".process.items.00000000-0000-0000-0000-000000000000.settings.titleTemplate"
+msgid "Оформление командировки ({$business_trips})"
+msgstr "Оформление командировки ({$business_trips})"
+
+msgctxt ".process.items.0dab039f-1085-4bc6-9c3d-dfcd1912f590.name"
+msgid "Таймер"
+msgstr "Таймер"
+
+msgctxt ".process.items.16d53126-1f18-498c-91ad-bcfbc1ba1be4.name"
+msgid "Командировка -\u003e Согласована"
+msgstr "Командировка -\u003e Согласована"
+
+msgctxt ".process.items.249fb0c5-3d16-4457-8606-3ac60509f38d.name"
+msgid "Командировка -\u003e Завершена"
+msgstr "Командировка -\u003e Завершена"
+
+msgctxt ".process.items.26c391f0-e32f-42a5-a9d3-292c74e0f633.name"
+msgid "Принять отчет о командировке"
+msgstr "Принять отчет о командировке"
+
+msgctxt ".process.items.2f6e14b0-615d-4fb2-8c3f-380500ab5990.name"
+msgid "Согласовать командировку"
+msgstr "Согласовать командировку"
+
+msgctxt ".process.items.54262998-350a-419c-a522-81541814e23e.name"
+msgid "Командировка -\u003e Текущая"
+msgstr "Командировка -\u003e Текущая"
+
+msgctxt ".process.items.7b1470a2-2fce-4491-8341-f620396ad854.name"
+msgid "Записываем в контекст служебные данные"
+msgstr "Записываем в контекст служебные данные"
+
+msgctxt ".process.items.8ab33826-0cdb-4056-88b5-36e25dfa750f.name"
+msgid "Отчитаться о командировке"
+msgstr "Отчитаться о командировке"
+
+msgctxt ".process.items.a90161c5-a95c-4c4c-a518-3639eddd1f60.name"
+msgid "Командировка -\u003e Отклонена"
+msgstr "Командировка -\u003e Отклонена"
+
+msgctxt ".process.items.c61d35d2-c63d-4143-b201-c428250d8891.name"
+msgid "Оповещение об отказе"
+msgstr "Оповещение об отказе"
+
+msgctxt ".process.items.c61d35d2-c63d-4143-b201-c428250d8891.settings.messageBody"
+msgid "Причина: {$__comment}"
+msgstr "Причина: {$__comment}"
+
+msgctxt ".process.items.c61d35d2-c63d-4143-b201-c428250d8891.settings.messageHeader"
+msgid "{$business_trips} - отказано"
+msgstr "{$business_trips} - отказано"
+
+msgctxt ".process.items.e38a8466-091e-4a15-8baf-fb086d239d0e.name"
+msgid "Оповещение о согласовании"
+msgstr "Оповещение о согласовании"
+
+msgctxt ".process.items.e38a8466-091e-4a15-8baf-fb086d239d0e.settings.messageHeader"
+msgid "{$business_trips} - согласовано"
+msgstr "{$business_trips} - согласовано"
+
+msgctxt ".process.items.edf5145c-2c40-4932-b4de-20094257075d.name"
+msgid "Купить билеты"
+msgstr "Купить билеты"
+
+msgctxt ".process.items.fd5368c0-2011-4a80-9e31-c99a8bbd976f.name"
+msgid "Создание отсутствия"
+msgstr "Создание отсутствия"
+
+msgctxt ".process.lanes.1fba9d29-e940-4c6e-882d-fa08ae87c03e.name"
+msgid "Бухгалтер"
+msgstr "Бухгалтер"
+
+msgctxt ".process.lanes.61bd2a55-b007-441f-a2a0-89caee04f209.name"
+msgid "Инициатор"
+msgstr "Инициатор"
+
+msgctxt ".process.lanes.9ca616de-4798-476f-9944-59e8d28a02a8.name"
+msgid "Офис-менеджер"
+msgstr "Офис-менеджер"
+
+msgctxt ".process.lanes.a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9.name"
+msgid "Руководитель"
+msgstr "Руководитель"
+
+msgctxt ".process.transitions.19e9bd18-253e-46fc-97fc-3aa49892319f.name"
+msgid "Подать отчет"
+msgstr "Подать отчет"
+
+msgctxt ".process.transitions.1aa87df5-ab04-4287-8154-6a33d318ecec.name"
+msgid "Готово"
+msgstr "Готово"
+
+msgctxt ".process.transitions.4428b0bf-e234-4b9e-82fa-2299fbc2a2e4.name"
+msgid "Вернуть на доработку"
+msgstr "Вернуть на доработку"
+
+msgctxt ".process.transitions.752562f8-608f-4bfe-95b8-90cbcaee0fc1.name"
+msgid "Отказать"
+msgstr "Отказать"
+
+msgctxt ".process.transitions.922a1e34-aedf-4d2e-9740-8355a57b12ff.name"
+msgid "Отчет принят"
+msgstr "Отчет принят"
+
+msgctxt ".process.transitions.93eba85b-7d35-4a02-b67f-c354bfa29e48.name"
+msgid "Согласовать"
+msgstr "Согласовать"

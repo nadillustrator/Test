@@ -1,0 +1,86 @@
+{
+  "number": 1,
+  "Service": "main.permissions",
+  "entities": [
+    {
+      "name": "График отсутствий",
+      "kind": "permissionSettings",
+      "path": "entities/records_management_/absence.permissionSettings.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "absence",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "__directory",
+      "kind": "permissionSettings",
+      "path": "entities/records_management_/absence@__directory.permissionSettings.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "absence@__directory",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "Командировки",
+      "kind": "permissionSettings",
+      "path": "entities/records_management_/business_trips.permissionSettings.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "business_trips",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "Оформление командировки",
+      "kind": "permissionSettings",
+      "path": "entities/records_management_/business_trips/_process_business_trip.permissionSettings.json",
+      "description": "",
+      "namespace": "records_management_.business_trips",
+      "code": "_process_business_trip",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "__directory",
+      "kind": "permissionSettings",
+      "path": "entities/records_management_/business_trips@__directory.permissionSettings.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "business_trips@__directory",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "График отсутствий",
+      "kind": "pagePermissions",
+      "path": "entities/records_management_/absence.pagePermissions.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "absence",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "Командировки",
+      "kind": "pagePermissions",
+      "path": "entities/records_management_/business_trips.pagePermissions.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "business_trips",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "Служебные записки",
+      "kind": "pagePermissions",
+      "path": "entities/global/records_management_.pagePermissions.json",
+      "description": "",
+      "namespace": "global",
+      "code": "records_management_",
+      "history": null,
+      "resources": null
+    }
+  ]
+}

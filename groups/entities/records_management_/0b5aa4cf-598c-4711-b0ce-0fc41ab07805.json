@@ -1,0 +1,17 @@
+{
+  "__id": "ec1a74ae-fe50-56f2-8c8d-fd66b122e291",
+  "namespace": "records_management_",
+  "code": "0b5aa4cf-598c-4711-b0ce-0fc41ab07805",
+  "__name": "Офис-менеджер",
+  "description": "",
+  "isDefault": false,
+  "isRole": true,
+  "privileges": ["system"],
+  "subOrgunitIds": null,
+  "__createdAt": "2022-09-13T08:29:12.961001848Z",
+  "__updatedAt": "2022-09-13T08:41:51.746503328Z",
+  "__deletedAt": null,
+  "__createdBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__updatedBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "integration": null
+}

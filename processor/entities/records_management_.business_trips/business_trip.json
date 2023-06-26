@@ -1,0 +1,1727 @@
+{
+  "__id": "eb13ce27-68ac-462a-9250-b0de686cdb2e",
+  "namespace": "records_management_.business_trips",
+  "code": "business_trip",
+  "category": "00000000-0000-0000-0000-000000000000",
+  "__name": "Оформление командировки",
+  "type": "bpmn",
+  "draft": false,
+  "version": 6,
+  "process": {
+    "items": {
+      "00000000-0000-0000-0000-000000000000": {
+        "x": 32,
+        "y": 64,
+        "id": "00000000-0000-0000-0000-000000000000",
+        "lane": "61bd2a55-b007-441f-a2a0-89caee04f209",
+        "type": "start",
+        "color": "#ffffff",
+        "exits": ["8b11dea4-8be8-4395-bbcc-42fa0acfeb85"],
+        "width": 32,
+        "height": 32,
+        "settings": {
+          "formFields": [
+            {
+              "code": "__name",
+              "display": "Название",
+              "tooltip": "Название экземпляра процесса, будет показываться в задачах",
+              "readonly": false,
+              "required": true
+            }
+          ],
+          "instruction": "",
+          "notifyMessage": "Запущен процесс",
+          "titleTemplate": "Оформление командировки ({$business_trips})",
+          "titleGenerateMethod": "template"
+        }
+      },
+      "0dab039f-1085-4bc6-9c3d-dfcd1912f590": {
+        "x": 712,
+        "y": 376,
+        "id": "0dab039f-1085-4bc6-9c3d-dfcd1912f590",
+        "icon": "timer",
+        "lane": "9ca616de-4798-476f-9944-59e8d28a02a8",
+        "name": "Таймер",
+        "type": "event",
+        "color": "#ffffff",
+        "exits": ["98a525e0-6212-4811-8399-526adc147b54"],
+        "width": 32,
+        "height": 32,
+        "settings": {
+          "kind": "timer",
+          "timer": {
+            "code": "startdate",
+            "days": 0,
+            "kind": "variable",
+            "hours": 0,
+            "minutes": 0,
+            "absolute": false,
+            "substraction": false
+          }
+        }
+      },
+      "16d53126-1f18-498c-91ad-bcfbc1ba1be4": {
+        "x": 480,
+        "y": 48,
+        "id": "16d53126-1f18-498c-91ad-bcfbc1ba1be4",
+        "icon": "change",
+        "lane": "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9",
+        "name": "Командировка -\u003e Согласована",
+        "type": "status",
+        "color": "#fde9a0",
+        "exits": ["db263563-82a8-4f02-a444-7771287be899"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "status": 2,
+          "variable": "business_trips",
+          "keepInCurrentGroup": false
+        }
+      },
+      "249fb0c5-3d16-4457-8606-3ac60509f38d": {
+        "x": 936,
+        "y": 512,
+        "id": "249fb0c5-3d16-4457-8606-3ac60509f38d",
+        "icon": "change",
+        "lane": "1fba9d29-e940-4c6e-882d-fa08ae87c03e",
+        "name": "Командировка -\u003e Завершена",
+        "type": "status",
+        "color": "#fde9a0",
+        "exits": ["bda63efc-10dc-451d-b69c-5170f88830a2"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "status": 5,
+          "variable": "business_trips",
+          "keepInCurrentGroup": false
+        }
+      },
+      "26c391f0-e32f-42a5-a9d3-292c74e0f633": {
+        "x": 936,
+        "y": 416,
+        "id": "26c391f0-e32f-42a5-a9d3-292c74e0f633",
+        "icon": "user",
+        "lane": "1fba9d29-e940-4c6e-882d-fa08ae87c03e",
+        "name": "Принять отчет о командировке",
+        "type": "user",
+        "color": "#daeef7",
+        "exits": [
+          "922a1e34-aedf-4d2e-9740-8355a57b12ff",
+          "4428b0bf-e234-4b9e-82fa-2299fbc2a2e4"
+        ],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "name": "",
+          "notify": true,
+          "escalation": {
+            "byTime": {
+              "limit": {
+                "days": 0,
+                "kind": "duration",
+                "hours": 0,
+                "minutes": 0,
+                "absolute": false
+              },
+              "action": {
+                "notify": false,
+                "interrupt": false,
+                "receivers": []
+              },
+              "enabled": false
+            }
+          },
+          "formFields": [
+            {
+              "code": "business_trips",
+              "data": {
+                "createButtonId": "",
+                "showCreateItem": true,
+                "showSelectItem": true
+              },
+              "tooltip": "",
+              "readonly": true,
+              "required": false,
+              "hideEmpty": false,
+              "subfields": [
+                {
+                  "code": "our_company",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "emloyee",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "city",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "trip_reason",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "start_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "end_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "trip_report",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                }
+              ]
+            }
+          ],
+          "allowReassign": true,
+          "planDatesSettings": {
+            "enabled": false,
+            "planCodes": {
+              "endCode": "",
+              "startCode": ""
+            }
+          }
+        }
+      },
+      "2f6e14b0-615d-4fb2-8c3f-380500ab5990": {
+        "x": 336,
+        "y": 48,
+        "id": "2f6e14b0-615d-4fb2-8c3f-380500ab5990",
+        "icon": "user",
+        "lane": "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9",
+        "name": "Согласовать командировку",
+        "type": "user",
+        "color": "#daeef7",
+        "exits": [
+          "93eba85b-7d35-4a02-b67f-c354bfa29e48",
+          "752562f8-608f-4bfe-95b8-90cbcaee0fc1"
+        ],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "name": "",
+          "notify": true,
+          "escalation": {
+            "byTime": {
+              "limit": {
+                "days": 0,
+                "kind": "duration",
+                "hours": 0,
+                "minutes": 0,
+                "absolute": false
+              },
+              "action": {
+                "notify": false,
+                "interrupt": false,
+                "receivers": []
+              },
+              "enabled": false
+            }
+          },
+          "formFields": [
+            {
+              "code": "business_trips",
+              "data": {
+                "createButtonId": "",
+                "showCreateItem": true,
+                "showSelectItem": true
+              },
+              "tooltip": "",
+              "readonly": true,
+              "required": false,
+              "hideEmpty": false,
+              "subfields": [
+                {
+                  "code": "__name",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "our_company",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "emloyee",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "city",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "trip_reason",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "start_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "end_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "need_tickets",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                }
+              ]
+            }
+          ],
+          "allowReassign": true,
+          "planDatesSettings": {
+            "enabled": false,
+            "planCodes": {
+              "endCode": "",
+              "startCode": ""
+            }
+          }
+        }
+      },
+      "54262998-350a-419c-a522-81541814e23e": {
+        "x": 480,
+        "y": 360,
+        "id": "54262998-350a-419c-a522-81541814e23e",
+        "icon": "change",
+        "lane": "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9",
+        "name": "Командировка -\u003e Текущая",
+        "type": "status",
+        "color": "#fde9a0",
+        "exits": ["20545c22-d36a-4061-bb61-1fc052f63d3d"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "status": 3,
+          "variable": "business_trips",
+          "keepInCurrentGroup": false
+        }
+      },
+      "6e27098f-ac31-4ca9-9812-225196d3f25a": {
+        "x": 96,
+        "y": 160,
+        "id": "6e27098f-ac31-4ca9-9812-225196d3f25a",
+        "icon": "end",
+        "lane": "61bd2a55-b007-441f-a2a0-89caee04f209",
+        "name": "",
+        "type": "end",
+        "color": "#ffffff",
+        "exits": [],
+        "width": 32,
+        "height": 32,
+        "settings": {
+          "actions": [],
+          "isModal": false,
+          "actionType": "nothing",
+          "messageText": "",
+          "redirectUrl": ""
+        }
+      },
+      "7b1470a2-2fce-4491-8341-f620396ad854": {
+        "x": 104,
+        "y": 48,
+        "id": "7b1470a2-2fce-4491-8341-f620396ad854",
+        "icon": "system",
+        "lane": "61bd2a55-b007-441f-a2a0-89caee04f209",
+        "name": "Записываем в контекст служебные данные",
+        "type": "assignment",
+        "color": "#fde9a0",
+        "exits": ["f0f31118-3933-4269-9150-b1dd054c4ca9"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "bindings": [
+            {
+              "source": {
+                "kind": "context",
+                "value": "business_trips.need_tickets"
+              },
+              "target": {
+                "kind": "context",
+                "value": "needtickets"
+              }
+            },
+            {
+              "source": {
+                "kind": "context",
+                "value": "business_trips.start_date"
+              },
+              "target": {
+                "kind": "context",
+                "value": "startdate"
+              }
+            },
+            {
+              "source": {
+                "kind": "context",
+                "value": "business_trips.chief"
+              },
+              "target": {
+                "kind": "context",
+                "value": "supeior"
+              }
+            }
+          ]
+        }
+      },
+      "8ab33826-0cdb-4056-88b5-36e25dfa750f": {
+        "x": 200,
+        "y": 360,
+        "id": "8ab33826-0cdb-4056-88b5-36e25dfa750f",
+        "icon": "user",
+        "lane": "61bd2a55-b007-441f-a2a0-89caee04f209",
+        "name": "Отчитаться о командировке",
+        "type": "user",
+        "color": "#daeef7",
+        "exits": ["19e9bd18-253e-46fc-97fc-3aa49892319f"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "name": "",
+          "notify": true,
+          "escalation": {
+            "byTime": {
+              "limit": {
+                "days": 0,
+                "kind": "duration",
+                "hours": 0,
+                "minutes": 0,
+                "absolute": false
+              },
+              "action": {
+                "notify": false,
+                "interrupt": false,
+                "receivers": []
+              },
+              "enabled": false
+            }
+          },
+          "formFields": [
+            {
+              "code": "business_trips",
+              "data": {
+                "createButtonId": "",
+                "showCreateItem": true,
+                "showSelectItem": true
+              },
+              "tooltip": "",
+              "readonly": true,
+              "required": false,
+              "hideEmpty": false,
+              "subfields": [
+                {
+                  "code": "our_company",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "emloyee",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "city",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "trip_reason",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "start_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "end_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "trip_report",
+                  "readonly": false,
+                  "required": true,
+                  "hideEmpty": false
+                }
+              ]
+            }
+          ],
+          "allowReassign": true,
+          "planDatesSettings": {
+            "enabled": false,
+            "planCodes": {
+              "endCode": "",
+              "startCode": ""
+            }
+          }
+        }
+      },
+      "9f45117c-fb04-4f0b-a8dd-2aae22995fe9": {
+        "x": 1072,
+        "y": 528,
+        "id": "9f45117c-fb04-4f0b-a8dd-2aae22995fe9",
+        "icon": "end",
+        "lane": "1fba9d29-e940-4c6e-882d-fa08ae87c03e",
+        "name": "",
+        "type": "end",
+        "color": "#ffffff",
+        "exits": [],
+        "width": 32,
+        "height": 32,
+        "settings": {
+          "actions": [],
+          "isModal": false,
+          "actionType": "nothing",
+          "messageText": "",
+          "redirectUrl": ""
+        }
+      },
+      "a90161c5-a95c-4c4c-a518-3639eddd1f60": {
+        "x": 336,
+        "y": 144,
+        "id": "a90161c5-a95c-4c4c-a518-3639eddd1f60",
+        "icon": "change",
+        "lane": "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9",
+        "name": "Командировка -\u003e Отклонена",
+        "type": "status",
+        "color": "#fde9a0",
+        "exits": ["4fb7993b-0650-4f3d-9cfc-2b1d28c58878"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "status": 4,
+          "variable": "business_trips",
+          "keepInCurrentGroup": false
+        }
+      },
+      "b2e77fa3-a375-47b2-bb4c-405bb3d30315": {
+        "x": 712,
+        "y": 64,
+        "id": "b2e77fa3-a375-47b2-bb4c-405bb3d30315",
+        "icon": "exclusive",
+        "lane": "9ca616de-4798-476f-9944-59e8d28a02a8",
+        "name": "",
+        "type": "gateway",
+        "color": "#ffffff",
+        "exits": [
+          "ae5b8dd0-b759-4c31-9173-805ff8db786f",
+          "2bcde19b-8061-46c0-9a39-d50c7b29b874"
+        ],
+        "width": 32,
+        "height": 32,
+        "settings": {
+          "func": "",
+          "type": "exclusive",
+          "useFunc": false,
+          "funcType": "STRING",
+          "description": ""
+        }
+      },
+      "c61d35d2-c63d-4143-b201-c428250d8891": {
+        "x": 200,
+        "y": 144,
+        "id": "c61d35d2-c63d-4143-b201-c428250d8891",
+        "icon": "notification",
+        "lane": "61bd2a55-b007-441f-a2a0-89caee04f209",
+        "name": "Оповещение об отказе",
+        "type": "notification",
+        "color": "#ffff66",
+        "exits": ["e72e122a-65ff-419b-a3d4-e9a244779044"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "author": {
+            "code": "supeior",
+            "kind": "context"
+          },
+          "target": {
+            "kind": "process"
+          },
+          "receivers": [
+            {
+              "kind": "current"
+            }
+          ],
+          "messageBody": "Причина: {$__comment}",
+          "messageHeader": "{$business_trips} - отказано"
+        }
+      },
+      "e38a8466-091e-4a15-8baf-fb086d239d0e": {
+        "x": 480,
+        "y": 144,
+        "id": "e38a8466-091e-4a15-8baf-fb086d239d0e",
+        "icon": "notification",
+        "lane": "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9",
+        "name": "Оповещение о согласовании",
+        "type": "notification",
+        "color": "#ffff66",
+        "exits": ["fe6acfcf-528f-4e4f-97c9-b525bd3d6a3b"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "author": {
+            "code": "supeior",
+            "kind": "context"
+          },
+          "target": {
+            "kind": "process"
+          },
+          "receivers": [
+            {
+              "code": "__createdBy",
+              "kind": "context"
+            }
+          ],
+          "messageHeader": "{$business_trips} - согласовано"
+        }
+      },
+      "edf5145c-2c40-4932-b4de-20094257075d": {
+        "x": 808,
+        "y": 48,
+        "id": "edf5145c-2c40-4932-b4de-20094257075d",
+        "icon": "user",
+        "lane": "9ca616de-4798-476f-9944-59e8d28a02a8",
+        "name": "Купить билеты",
+        "type": "user",
+        "color": "#daeef7",
+        "exits": ["1aa87df5-ab04-4287-8154-6a33d318ecec"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "name": "",
+          "notify": true,
+          "escalation": {
+            "byTime": {
+              "limit": {
+                "days": 0,
+                "kind": "duration",
+                "hours": 0,
+                "minutes": 0,
+                "absolute": false
+              },
+              "action": {
+                "notify": false,
+                "interrupt": false,
+                "receivers": []
+              },
+              "enabled": false
+            }
+          },
+          "formFields": [
+            {
+              "code": "business_trips",
+              "data": {
+                "createButtonId": "",
+                "showCreateItem": true,
+                "showSelectItem": true
+              },
+              "tooltip": "",
+              "readonly": true,
+              "required": false,
+              "hideEmpty": false,
+              "subfields": [
+                {
+                  "code": "our_company",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "emloyee",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "city",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "trip_reason",
+                  "tooltip": "",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "start_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "end_date",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "passport",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                },
+                {
+                  "code": "ticketsComment",
+                  "readonly": true,
+                  "required": false,
+                  "hideEmpty": false
+                }
+              ]
+            }
+          ],
+          "allowReassign": true,
+          "planDatesSettings": {
+            "enabled": false,
+            "planCodes": {
+              "endCode": "",
+              "startCode": ""
+            }
+          }
+        }
+      },
+      "fd5368c0-2011-4a80-9e31-c99a8bbd976f": {
+        "x": 480,
+        "y": 272,
+        "id": "fd5368c0-2011-4a80-9e31-c99a8bbd976f",
+        "icon": "create",
+        "lane": "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9",
+        "name": "Создание отсутствия",
+        "type": "app_create",
+        "color": "#a0e9fd",
+        "exits": ["4e0ad6e1-7576-4e95-a6f0-a1e9325ac9bb"],
+        "width": 80,
+        "height": 64,
+        "settings": {
+          "manual": false,
+          "bindings": [
+            {
+              "source": {
+                "kind": "context",
+                "value": "business_trips.__name"
+              },
+              "target": {
+                "kind": "context",
+                "value": "__name"
+              }
+            },
+            {
+              "source": {
+                "kind": "context",
+                "value": "business_trips.start_date"
+              },
+              "target": {
+                "kind": "context",
+                "value": "__startAt"
+              }
+            },
+            {
+              "source": {
+                "kind": "context",
+                "value": "business_trips.end_date"
+              },
+              "target": {
+                "kind": "context",
+                "value": "__endAt"
+              }
+            },
+            {
+              "source": {
+                "kind": "context",
+                "value": "business_trips.emloyee"
+              },
+              "target": {
+                "kind": "context",
+                "value": "__participants"
+              }
+            }
+          ],
+          "variable": "absence"
+        }
+      }
+    },
+    "lanes": {
+      "1fba9d29-e940-4c6e-882d-fa08ae87c03e": {
+        "x": 904,
+        "y": 8,
+        "id": "1fba9d29-e940-4c6e-882d-fa08ae87c03e",
+        "name": "Бухгалтер",
+        "color": "#e8e4e8",
+        "width": 224,
+        "height": 600,
+        "settings": {
+          "type": "static",
+          "group": {
+            "code": "fdd5b67f-6f46-4e3b-8d51-77a5bfe423d2",
+            "kind": "common",
+            "multi": false,
+            "namespace": "records_management_"
+          },
+          "groups": [
+            {
+              "code": "fdd5b67f-6f46-4e3b-8d51-77a5bfe423d2",
+              "kind": "common",
+              "multi": false,
+              "namespace": "records_management_"
+            }
+          ],
+          "variable": "",
+          "permissionExtend": {
+            "kind": "simple"
+          }
+        },
+        "direction": "vertical",
+        "multiInstance": false
+      },
+      "61bd2a55-b007-441f-a2a0-89caee04f209": {
+        "x": 8,
+        "y": 8,
+        "id": "61bd2a55-b007-441f-a2a0-89caee04f209",
+        "name": "Инициатор",
+        "color": "#d6f0cc",
+        "width": 316,
+        "height": 600,
+        "settings": {
+          "type": "dynamic",
+          "variable": "__createdBy",
+          "permissionExtend": {
+            "kind": "simple"
+          }
+        },
+        "direction": "vertical",
+        "multiInstance": false
+      },
+      "9ca616de-4798-476f-9944-59e8d28a02a8": {
+        "x": 680,
+        "y": 8,
+        "id": "9ca616de-4798-476f-9944-59e8d28a02a8",
+        "name": "Офис-менеджер",
+        "color": "#e8e4e8",
+        "width": 224,
+        "height": 600,
+        "settings": {
+          "type": "static",
+          "group": {
+            "code": "0b5aa4cf-598c-4711-b0ce-0fc41ab07805",
+            "kind": "common",
+            "multi": false,
+            "namespace": "records_management_"
+          },
+          "groups": [
+            {
+              "code": "0b5aa4cf-598c-4711-b0ce-0fc41ab07805",
+              "kind": "common",
+              "multi": false,
+              "namespace": "records_management_"
+            }
+          ],
+          "variable": "",
+          "permissionExtend": {
+            "kind": "simple"
+          }
+        },
+        "direction": "vertical",
+        "multiInstance": false
+      },
+      "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9": {
+        "x": 324,
+        "y": 8,
+        "id": "a6c6e41d-d25c-4dc8-ac86-dca7ba4982e9",
+        "name": "Руководитель",
+        "color": "#d6f0cc",
+        "width": 356,
+        "height": 600,
+        "settings": {
+          "type": "dynamic",
+          "groups": [null],
+          "variable": "supeior",
+          "permissionExtend": {
+            "kind": "simple"
+          }
+        },
+        "direction": "vertical",
+        "multiInstance": false
+      }
+    },
+    "paper": {
+      "format": "A4",
+      "orientation": "landscape"
+    },
+    "transitions": {
+      "19e9bd18-253e-46fc-97fc-3aa49892319f": {
+        "id": "19e9bd18-253e-46fc-97fc-3aa49892319f",
+        "name": "Подать отчет",
+        "path": [
+          {
+            "x": 240,
+            "y": 424
+          },
+          {
+            "x": 240,
+            "y": 448
+          },
+          {
+            "x": 936,
+            "y": 448
+          }
+        ],
+        "type": "plain",
+        "source": "8ab33826-0cdb-4056-88b5-36e25dfa750f",
+        "target": "26c391f0-e32f-42a5-a9d3-292c74e0f633",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "primary",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "1aa87df5-ab04-4287-8154-6a33d318ecec": {
+        "id": "1aa87df5-ab04-4287-8154-6a33d318ecec",
+        "name": "Готово",
+        "path": [
+          {
+            "x": 848,
+            "y": 112
+          },
+          {
+            "x": 848,
+            "y": 392
+          },
+          {
+            "x": 744,
+            "y": 392
+          }
+        ],
+        "type": "plain",
+        "source": "edf5145c-2c40-4932-b4de-20094257075d",
+        "target": "0dab039f-1085-4bc6-9c3d-dfcd1912f590",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "primary",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "20545c22-d36a-4061-bb61-1fc052f63d3d": {
+        "id": "20545c22-d36a-4061-bb61-1fc052f63d3d",
+        "name": "",
+        "path": [
+          {
+            "x": 480,
+            "y": 392
+          },
+          {
+            "x": 280,
+            "y": 392
+          }
+        ],
+        "type": "plain",
+        "source": "54262998-350a-419c-a522-81541814e23e",
+        "target": "8ab33826-0cdb-4056-88b5-36e25dfa750f",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "2bcde19b-8061-46c0-9a39-d50c7b29b874": {
+        "id": "2bcde19b-8061-46c0-9a39-d50c7b29b874",
+        "name": "",
+        "path": [
+          {
+            "x": 728,
+            "y": 96
+          },
+          {
+            "x": 728,
+            "y": 376
+          }
+        ],
+        "type": "default",
+        "source": "b2e77fa3-a375-47b2-bb4c-405bb3d30315",
+        "target": "0dab039f-1085-4bc6-9c3d-dfcd1912f590",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "4428b0bf-e234-4b9e-82fa-2299fbc2a2e4": {
+        "id": "4428b0bf-e234-4b9e-82fa-2299fbc2a2e4",
+        "name": "Вернуть на доработку",
+        "path": [
+          {
+            "x": 936,
+            "y": 464
+          },
+          {
+            "x": 220,
+            "y": 464
+          },
+          {
+            "x": 220,
+            "y": 424
+          }
+        ],
+        "type": "plain",
+        "source": "26c391f0-e32f-42a5-a9d3-292c74e0f633",
+        "target": "8ab33826-0cdb-4056-88b5-36e25dfa750f",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "danger",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "4e0ad6e1-7576-4e95-a6f0-a1e9325ac9bb": {
+        "id": "4e0ad6e1-7576-4e95-a6f0-a1e9325ac9bb",
+        "name": "",
+        "path": [
+          {
+            "x": 560,
+            "y": 304
+          },
+          {
+            "x": 704,
+            "y": 304
+          },
+          {
+            "x": 704,
+            "y": 80
+          },
+          {
+            "x": 712,
+            "y": 80
+          }
+        ],
+        "type": "plain",
+        "source": "fd5368c0-2011-4a80-9e31-c99a8bbd976f",
+        "target": "b2e77fa3-a375-47b2-bb4c-405bb3d30315",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "4fb7993b-0650-4f3d-9cfc-2b1d28c58878": {
+        "id": "4fb7993b-0650-4f3d-9cfc-2b1d28c58878",
+        "name": "",
+        "path": [
+          {
+            "x": 336,
+            "y": 176
+          },
+          {
+            "x": 280,
+            "y": 176
+          }
+        ],
+        "type": "plain",
+        "source": "a90161c5-a95c-4c4c-a518-3639eddd1f60",
+        "target": "c61d35d2-c63d-4143-b201-c428250d8891",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "752562f8-608f-4bfe-95b8-90cbcaee0fc1": {
+        "id": "752562f8-608f-4bfe-95b8-90cbcaee0fc1",
+        "name": "Отказать",
+        "path": [
+          {
+            "x": 376,
+            "y": 112
+          },
+          {
+            "x": 376,
+            "y": 144
+          }
+        ],
+        "type": "plain",
+        "source": "2f6e14b0-615d-4fb2-8c3f-380500ab5990",
+        "target": "a90161c5-a95c-4c4c-a518-3639eddd1f60",
+        "settings": {
+          "exit": {
+            "confirm": "form",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [
+              {
+                "code": "__comment",
+                "tooltip": "",
+                "readonly": false,
+                "required": false,
+                "hideEmpty": false
+              }
+            ],
+            "buttonClass": "danger",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "8b11dea4-8be8-4395-bbcc-42fa0acfeb85": {
+        "id": "8b11dea4-8be8-4395-bbcc-42fa0acfeb85",
+        "name": "",
+        "path": [
+          {
+            "x": 64,
+            "y": 80
+          },
+          {
+            "x": 104,
+            "y": 80
+          }
+        ],
+        "type": "plain",
+        "source": "00000000-0000-0000-0000-000000000000",
+        "target": "7b1470a2-2fce-4491-8341-f620396ad854",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "922a1e34-aedf-4d2e-9740-8355a57b12ff": {
+        "id": "922a1e34-aedf-4d2e-9740-8355a57b12ff",
+        "name": "Отчет принят",
+        "path": [
+          {
+            "x": 976,
+            "y": 480
+          },
+          {
+            "x": 976,
+            "y": 512
+          }
+        ],
+        "type": "plain",
+        "source": "26c391f0-e32f-42a5-a9d3-292c74e0f633",
+        "target": "249fb0c5-3d16-4457-8606-3ac60509f38d",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "primary",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "93eba85b-7d35-4a02-b67f-c354bfa29e48": {
+        "id": "93eba85b-7d35-4a02-b67f-c354bfa29e48",
+        "name": "Согласовать",
+        "path": [
+          {
+            "x": 416,
+            "y": 80
+          },
+          {
+            "x": 480,
+            "y": 80
+          }
+        ],
+        "type": "plain",
+        "source": "2f6e14b0-615d-4fb2-8c3f-380500ab5990",
+        "target": "16d53126-1f18-498c-91ad-bcfbc1ba1be4",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "primary",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "98a525e0-6212-4811-8399-526adc147b54": {
+        "id": "98a525e0-6212-4811-8399-526adc147b54",
+        "name": "",
+        "path": [
+          {
+            "x": 712,
+            "y": 392
+          },
+          {
+            "x": 560,
+            "y": 392
+          }
+        ],
+        "type": "plain",
+        "source": "0dab039f-1085-4bc6-9c3d-dfcd1912f590",
+        "target": "54262998-350a-419c-a522-81541814e23e",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "ae5b8dd0-b759-4c31-9173-805ff8db786f": {
+        "id": "ae5b8dd0-b759-4c31-9173-805ff8db786f",
+        "name": "",
+        "path": [
+          {
+            "x": 744,
+            "y": 80
+          },
+          {
+            "x": 808,
+            "y": 80
+          }
+        ],
+        "type": "plain",
+        "source": "b2e77fa3-a375-47b2-bb4c-405bb3d30315",
+        "target": "edf5145c-2c40-4932-b4de-20094257075d",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [
+            {
+              "a": {
+                "kind": "context",
+                "value": "needtickets"
+              },
+              "b": {
+                "kind": "manual",
+                "value": true
+              },
+              "type": "BOOLEAN",
+              "inversion": false,
+              "operation": {
+                "relation": "equal",
+                "inversion": false,
+                "caseInsensitive": false
+              },
+              "conjunction": false
+            }
+          ],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "bda63efc-10dc-451d-b69c-5170f88830a2": {
+        "id": "bda63efc-10dc-451d-b69c-5170f88830a2",
+        "name": "",
+        "path": [
+          {
+            "x": 1016,
+            "y": 544
+          },
+          {
+            "x": 1072,
+            "y": 544
+          }
+        ],
+        "type": "plain",
+        "source": "249fb0c5-3d16-4457-8606-3ac60509f38d",
+        "target": "9f45117c-fb04-4f0b-a8dd-2aae22995fe9",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "db263563-82a8-4f02-a444-7771287be899": {
+        "id": "db263563-82a8-4f02-a444-7771287be899",
+        "name": "",
+        "path": [
+          {
+            "x": 520,
+            "y": 112
+          },
+          {
+            "x": 520,
+            "y": 144
+          }
+        ],
+        "type": "plain",
+        "source": "16d53126-1f18-498c-91ad-bcfbc1ba1be4",
+        "target": "e38a8466-091e-4a15-8baf-fb086d239d0e",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "e72e122a-65ff-419b-a3d4-e9a244779044": {
+        "id": "e72e122a-65ff-419b-a3d4-e9a244779044",
+        "name": "",
+        "path": [
+          {
+            "x": 200,
+            "y": 176
+          },
+          {
+            "x": 128,
+            "y": 176
+          }
+        ],
+        "type": "plain",
+        "source": "c61d35d2-c63d-4143-b201-c428250d8891",
+        "target": "6e27098f-ac31-4ca9-9812-225196d3f25a",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "f0f31118-3933-4269-9150-b1dd054c4ca9": {
+        "id": "f0f31118-3933-4269-9150-b1dd054c4ca9",
+        "name": "",
+        "path": [
+          {
+            "x": 184,
+            "y": 80
+          },
+          {
+            "x": 336,
+            "y": 80
+          }
+        ],
+        "type": "plain",
+        "source": "7b1470a2-2fce-4491-8341-f620396ad854",
+        "target": "2f6e14b0-615d-4fb2-8c3f-380500ab5990",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      },
+      "fe6acfcf-528f-4e4f-97c9-b525bd3d6a3b": {
+        "id": "fe6acfcf-528f-4e4f-97c9-b525bd3d6a3b",
+        "name": "",
+        "path": [
+          {
+            "x": 520,
+            "y": 208
+          },
+          {
+            "x": 520,
+            "y": 272
+          }
+        ],
+        "type": "plain",
+        "source": "e38a8466-091e-4a15-8baf-fb086d239d0e",
+        "target": "fd5368c0-2011-4a80-9e31-c99a8bbd976f",
+        "settings": {
+          "exit": {
+            "confirm": "none",
+            "interrupt": false,
+            "skipCheck": false,
+            "formFields": [],
+            "buttonClass": "default",
+            "confirmText": "",
+            "popoverSize": "md",
+            "formDescription": ""
+          },
+          "conditions": [],
+          "descritpion": ""
+        },
+        "nameShift": 0
+      }
+    }
+  },
+  "context": [
+    {
+      "code": "business_trips",
+      "type": "SYS_COLLECTION",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "code": "business_trips",
+        "namespace": "records_management_"
+      },
+      "view": {
+        "name": "Командировка"
+      }
+    },
+    {
+      "code": "supeior",
+      "type": "SYS_USER",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "filter": {
+          "value": {
+            "tf": {}
+          },
+          "enabled": false
+        }
+      },
+      "view": {
+        "name": "Руководитель",
+        "data": {}
+      }
+    },
+    {
+      "code": "needtickets",
+      "type": "BOOLEAN",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Требуется покупка билетов?",
+        "data": {
+          "noValue": "Нет",
+          "yesValue": "Да",
+          "additionalType": "radio"
+        }
+      }
+    },
+    {
+      "code": "startdate",
+      "type": "DATETIME",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {},
+      "view": {
+        "name": "Дата начала поездки",
+        "data": {
+          "timeOptional": false,
+          "additionalType": "date",
+          "defaultTimeType": "startOfDay"
+        }
+      }
+    },
+    {
+      "code": "office_manager",
+      "type": "SYS_USER",
+      "searchable": false,
+      "indexed": false,
+      "deleted": true,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "filter": {
+          "value": {
+            "tf": {}
+          },
+          "enabled": false
+        }
+      },
+      "view": {
+        "name": "Офис-менеджер",
+        "data": {}
+      }
+    },
+    {
+      "code": "accountant",
+      "type": "SYS_USER",
+      "searchable": false,
+      "indexed": false,
+      "deleted": true,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "filter": {
+          "value": {
+            "tf": {}
+          },
+          "enabled": false
+        }
+      },
+      "view": {
+        "name": "Бухгалетр",
+        "data": {}
+      }
+    },
+    {
+      "code": "absence",
+      "type": "SYS_COLLECTION",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "code": "absence",
+        "filter": {
+          "value": {
+            "tf": {}
+          },
+          "enabled": false
+        },
+        "namespace": "records_management_"
+      },
+      "view": {
+        "name": "Отсутствие",
+        "data": {}
+      }
+    }
+  ],
+  "scripts": "/**\nHere you can write scripts for complex server processing of the context during process execution.\nTo write scripts, use TypeScript (https://www.typescriptlang.org).\nELMA365 SDK documentation available on https://tssdk.elma365.com.\n**/\n",
+  "forms": [],
+  "settings": {
+    "logged": true,
+    "targetFeed": {
+      "type": "object",
+      "variable": "business_trips"
+    },
+    "allowGlobal": false,
+    "instanceCard": {
+      "allFields": true,
+      "formFields": []
+    },
+    "notifyOnStart": true,
+    "allowNamespace": false,
+    "applicationContext": false,
+    "fieldVisibilityConditions": {
+      "needtickets": {
+        "enabled": false,
+        "conditions": []
+      }
+    }
+  },
+  "manualRun": false,
+  "hideInList": false,
+  "readonly": false,
+  "applicationLink": false,
+  "__createdAt": "2022-09-13T07:43:14.589325181Z",
+  "__createdBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__updatedAt": "2022-09-14T12:40:49.825116841Z",
+  "__updatedBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__deletedAt": null
+}

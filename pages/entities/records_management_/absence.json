@@ -1,0 +1,38 @@
+{
+  "__id": "dedbe714-175c-5692-9cbf-0defc3afaf92",
+  "name": "График отсутствий",
+  "namespace": "records_management_",
+  "code": "absence",
+  "type": "APPLICATION",
+  "icon": "system_time",
+  "sort": 2,
+  "system": false,
+  "hidden": false,
+  "data": {
+    "openInNewTab": false,
+    "widgets": [
+      {
+        "type": "appview",
+        "customWidgetId": "",
+        "template": null,
+        "data": {
+          "pageCode": "absence",
+          "namespaceCode": "records_management_"
+        }
+      }
+    ],
+    "menu": {
+      "type": "namespace"
+    },
+    "layout": "schedule"
+  },
+  "recoveryWithParent": false,
+  "navigation": null,
+  "__createdAt": "2022-09-13T12:39:13.913988614Z",
+  "__updatedAt": "2022-09-13T12:39:14.324168839Z",
+  "__deletedAt": null,
+  "__createdBy": "6f0a6450-48ab-4e40-98c2-97154e119f5e",
+  "__updatedBy": "6f0a6450-48ab-4e40-98c2-97154e119f5e",
+  "editions": null,
+  "solution": "saas"
+}

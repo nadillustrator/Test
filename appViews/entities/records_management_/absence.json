@@ -1,0 +1,646 @@
+{
+  "__id": "dedbe714-175c-5692-9cbf-0defc3afaf92",
+  "name": "График отсутствий",
+  "elementName": "Отсутствие",
+  "namespace": "records_management_",
+  "code": "absence",
+  "type": "EVENT",
+  "fields": [
+    {
+      "code": "__name",
+      "type": "STRING",
+      "searchable": true,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Название",
+        "system": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "__directory",
+      "type": "CATEGORY",
+      "searchable": false,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": {
+        "fields": [
+          {
+            "code": "name",
+            "data": null,
+            "type": "STRING",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          },
+          {
+            "code": "parent",
+            "data": null,
+            "type": "STRING",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          },
+          {
+            "code": "level",
+            "data": null,
+            "type": "INTEGER",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          },
+          {
+            "code": "sort",
+            "data": null,
+            "type": "INTEGER",
+            "view": {},
+            "array": false,
+            "single": false,
+            "deleted": false,
+            "formula": "",
+            "indexed": false,
+            "required": false,
+            "searchable": true,
+            "defaultValue": null,
+            "calcByFormula": false
+          }
+        ]
+      },
+      "view": {
+        "name": "Папка в иерархии",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "__externalProcessMeta",
+      "type": "JSON",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Данные внешних процессов",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "additionalType": "object"
+        }
+      }
+    },
+    {
+      "code": "__externalId",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Внешний идентификатор",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "__startAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата начала",
+        "sort": 1,
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__endAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": true,
+      "deleted": false,
+      "array": false,
+      "required": true,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата окончания",
+        "sort": 2,
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__participants",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": true,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Участники",
+        "sort": 3,
+        "system": true
+      }
+    },
+    {
+      "code": "__eventId",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "system": true,
+        "hidden": true
+      }
+    },
+    {
+      "code": "__id",
+      "type": "STRING",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Идентификатор",
+        "system": true,
+        "data": {
+          "additionalType": "string"
+        }
+      }
+    },
+    {
+      "code": "__index",
+      "type": "FLOAT",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Индекс",
+        "system": true,
+        "data": {
+          "additionalType": "integer"
+        }
+      }
+    },
+    {
+      "code": "__tasks",
+      "type": "JSON",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Задачи",
+        "system": true,
+        "hidden": true
+      }
+    },
+    {
+      "code": "__tasks_earliest_duedate",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Срок выполнения ближайшей задачи",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__tasks_performers",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": true,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Исполнители",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__debug",
+      "type": "BOOLEAN",
+      "searchable": false,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Режим отладки",
+        "system": true,
+        "hidden": true,
+        "data": {
+          "noValue": "no",
+          "yesValue": "yes"
+        }
+      }
+    },
+    {
+      "code": "__createdAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата создания",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__createdBy",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Автор",
+        "system": true
+      }
+    },
+    {
+      "code": "__updatedAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата изменения",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__updatedBy",
+      "type": "SYS_USER",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Редактор",
+        "system": true
+      }
+    },
+    {
+      "code": "__deletedAt",
+      "type": "DATETIME",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": true,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Дата удаления",
+        "system": true,
+        "data": {
+          "additionalType": "datetime"
+        }
+      }
+    },
+    {
+      "code": "__status",
+      "type": "STATUS",
+      "searchable": true,
+      "indexed": false,
+      "deleted": false,
+      "array": false,
+      "required": false,
+      "single": false,
+      "defaultValue": null,
+      "calcByFormula": false,
+      "formula": "",
+      "data": null,
+      "view": {
+        "name": "Статус",
+        "system": true
+      }
+    }
+  ],
+  "filters": null,
+  "settings": {
+    "status": {
+      "items": [
+        {
+          "id": 1,
+          "code": "opened",
+          "data": null,
+          "name": "Открыто",
+          "color": "",
+          "actions": null,
+          "groupId": null,
+          "readonly": false,
+          "isFinished": false,
+          "isNegative": false,
+          "jumpMethod": "TO_STATUSES",
+          "hideFromBoard": false,
+          "jumpToStatuses": [2],
+          "backgroundColor": ""
+        },
+        {
+          "id": 2,
+          "code": "closed",
+          "data": null,
+          "name": "Закрыто",
+          "color": "",
+          "actions": null,
+          "groupId": null,
+          "readonly": false,
+          "isFinished": true,
+          "isNegative": false,
+          "jumpMethod": "NEXT",
+          "hideFromBoard": false,
+          "jumpToStatuses": null,
+          "backgroundColor": ""
+        }
+      ],
+      "nextId": 3,
+      "enabled": true,
+      "manualChange": false,
+      "transitionLog": false
+    },
+    "docflow": {
+      "excludeFields": [],
+      "excludeAllFields": true,
+      "excludeSystemFields": false
+    },
+    "listCard": {
+      "width": null,
+      "places": null,
+      "showTasks": false,
+      "expandCard": false,
+      "displaySystemInfo": false
+    },
+    "signature": {
+      "userAccess": null,
+      "excludeFields": null,
+      "excludeSystemFields": false
+    },
+    "userGuide": {
+      "text": ""
+    },
+    "dirsSettings": {
+      "enabled": false
+    },
+    "listSettings": {
+      "sort": {
+        "field": "",
+        "direction": ""
+      },
+      "limit": 0,
+      "buttons": null,
+      "aggregateField": "",
+      "autoUpdateCards": false,
+      "enabledMassActions": false
+    },
+    "massSettings": {
+      "buttons": null
+    },
+    "nameSettings": {
+      "titleTemplate": "",
+      "titleGenerateMethod": "keyvar"
+    },
+    "viewSettings": {
+      "buttons": [
+        {
+          "id": "e898f573-a28c-4ecb-b66c-3a837f250911",
+          "code": "edit",
+          "type": "primary",
+          "label": "Редактировать",
+          "bindings": null,
+          "immutable": false,
+          "silentRun": false,
+          "permission": "update",
+          "processCode": "",
+          "processField": "",
+          "defaultValues": null,
+          "useSimpleForm": false,
+          "deleteSettings": null,
+          "simpleFormSize": "",
+          "allowedGroupIds": null,
+          "allowedStatusIds": null,
+          "processNamespace": "",
+          "processLinkChanged": false,
+          "showForAllowedStatuses": false,
+          "showForAllowedStatusGroups": false
+        },
+        {
+          "id": "6c8b5d49-4960-4704-abca-b4cb2eceb93a",
+          "code": "change-status",
+          "type": "default",
+          "label": "Закрыть",
+          "bindings": null,
+          "immutable": false,
+          "silentRun": false,
+          "permission": "update",
+          "processCode": "",
+          "processField": "",
+          "defaultValues": null,
+          "useSimpleForm": false,
+          "deleteSettings": null,
+          "simpleFormSize": "",
+          "allowedGroupIds": null,
+          "allowedStatusIds": [1],
+          "processNamespace": "",
+          "processLinkChanged": false,
+          "changeStatusSettings": {
+            "newStatus": 2
+          },
+          "showForAllowedStatuses": true,
+          "showForAllowedStatusGroups": false
+        }
+      ]
+    },
+    "indexSettings": {
+      "serialCode": "",
+      "serialNamespace": ""
+    },
+    "tableSettings": {
+      "displayFields": null
+    },
+    "feederSettings": {
+      "onCreateElementEnabled": false
+    },
+    "defaultFilterId": null,
+    "documentSettings": null,
+    "registrationSettings": {
+      "enabled": false,
+      "orgunitIdModel": null,
+      "nomenclatureIds": null,
+      "restrictRegistration": "",
+      "preliminaryReservationSettings": {
+        "enabled": false,
+        "nomenclatureIds": null
+      }
+    }
+  },
+  "__createdAt": "2022-09-13T12:39:13.913988614Z",
+  "__updatedAt": "2022-09-13T12:40:04.995678546Z",
+  "__deletedAt": null,
+  "__createdBy": "6f0a6450-48ab-4e40-98c2-97154e119f5e",
+  "__updatedBy": "6f0a6450-48ab-4e40-98c2-97154e119f5e"
+}

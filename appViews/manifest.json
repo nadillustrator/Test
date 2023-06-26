@@ -1,0 +1,50 @@
+{
+  "number": 1,
+  "Service": "main.appViews",
+  "entities": [
+    {
+      "name": "График отсутствий",
+      "kind": "appView",
+      "path": "entities/records_management_/absence.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "absence",
+      "history": [
+        {
+          "version": "1bc8b5a1-4bf3-4af9-842c-0aa0b3be41b0",
+          "updatedAt": "2022-09-13T12:39:14.302414985Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "po",
+          "path": "resources/entities/records_management_/absence.json.po"
+        }
+      ]
+    },
+    {
+      "name": "Командировки",
+      "kind": "appView",
+      "path": "entities/records_management_/business_trips.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "business_trips",
+      "history": [
+        {
+          "version": "394108b0-cbc0-4029-85e4-ff6b475a53e5",
+          "updatedAt": "2022-09-13T08:26:13.236897888Z"
+        },
+        {
+          "version": "48135f95-e11f-44ac-a9b9-3bd5f26a27b2",
+          "updatedAt": "2022-09-14T11:23:40.272727879Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "po",
+          "path": "resources/entities/records_management_/business_trips.json.po"
+        }
+      ]
+    }
+  ]
+}

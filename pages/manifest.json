@@ -1,0 +1,66 @@
+{
+  "number": 1,
+  "Service": "pages",
+  "entities": [
+    {
+      "name": "График отсутствий",
+      "kind": "page",
+      "path": "entities/records_management_/absence.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "absence",
+      "history": [
+        {
+          "version": "08816b04-c721-4198-a7bf-c45329316ea3",
+          "updatedAt": "2022-09-13T12:39:14.27108976Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "widgets",
+          "path": "resources/records_management_/absence.widgets.json"
+        }
+      ]
+    },
+    {
+      "name": "Командировки",
+      "kind": "page",
+      "path": "entities/records_management_/business_trips.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "business_trips",
+      "history": [
+        {
+          "version": "794673b4-164a-4f2f-a0ac-12aff031f3b3",
+          "updatedAt": "2022-09-13T07:06:56.264870936Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "widgets",
+          "path": "resources/records_management_/business_trips.widgets.json"
+        }
+      ]
+    },
+    {
+      "name": "Служебные записки",
+      "kind": "page",
+      "path": "entities/global/records_management_.json",
+      "description": "",
+      "namespace": "global",
+      "code": "records_management_",
+      "history": [
+        {
+          "version": "b5bf224e-6fb7-4765-9efa-4eae46f5bf5b",
+          "updatedAt": "2022-09-13T07:05:38.683673775Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "widgets",
+          "path": "resources/global/records_management_.widgets.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "number": 1,
+  "Service": "widget",
+  "entities": [
+    {
+      "name": "Форма создания",
+      "kind": "widget",
+      "path": "entities/records_management_.business_trips/_create",
+      "description": "",
+      "namespace": "records_management_.business_trips",
+      "code": "_create",
+      "history": [
+        {
+          "version": "a6f3492f-b47c-4fac-a126-4647d37e9d3c",
+          "updatedAt": "2022-09-14T11:23:30.109696582Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "po",
+          "path": "resources/records_management_.business_trips/_create.po"
+        }
+      ]
+    },
+    {
+      "name": "Форма просмотра",
+      "kind": "widget",
+      "path": "entities/records_management_.business_trips/_view",
+      "description": "",
+      "namespace": "records_management_.business_trips",
+      "code": "_view",
+      "history": [
+        {
+          "version": "c8befd9d-756e-4c0a-b399-c8484dfb9b71",
+          "updatedAt": "2022-09-13T11:35:21.337148641Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "po",
+          "path": "resources/records_management_.business_trips/_view.po"
+        }
+      ]
+    },
+    {
+      "name": "Форма редактирования",
+      "kind": "widget",
+      "path": "entities/records_management_.business_trips/_edit",
+      "description": "",
+      "namespace": "records_management_.business_trips",
+      "code": "_edit",
+      "history": [
+        {
+          "version": "4628d370-8be2-4a73-948c-85294448c1bb",
+          "updatedAt": "2022-09-14T11:23:48.658155105Z"
+        }
+      ],
+      "resources": [
+        {
+          "kind": "po",
+          "path": "resources/records_management_.business_trips/_edit.po"
+        }
+      ]
+    }
+  ]
+}

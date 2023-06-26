@@ -1,0 +1,29 @@
+{
+  "__id": "2de61d36-3f91-522d-ae86-e405da24fa21",
+  "name": "Служебные записки",
+  "namespace": "global",
+  "code": "records_management_",
+  "type": "NAMESPACE",
+  "icon": "system_file_many",
+  "sort": 20,
+  "system": false,
+  "hidden": false,
+  "data": {
+    "openInNewTab": false,
+    "widgets": [],
+    "menu": {
+      "type": "namespace",
+      "showName": true
+    },
+    "columns": 1
+  },
+  "recoveryWithParent": false,
+  "navigation": null,
+  "__createdAt": "2022-09-13T07:05:38.573361448Z",
+  "__updatedAt": "2022-09-13T07:05:38.718815843Z",
+  "__deletedAt": null,
+  "__createdBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__updatedBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "editions": null,
+  "solution": "saas"
+}

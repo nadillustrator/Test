@@ -1,0 +1,14 @@
+msgid ""
+msgstr ""
+
+msgctxt ".__name"
+msgid "Форма редактирования"
+msgstr "Форма редактирования"
+
+msgctxt ".descriptor.template.content.[content][0].content.[0].content.[0].values.title"
+msgid "Основное"
+msgstr "Основное"
+
+msgctxt ".descriptor.template.content.[content][0].content.[0].content.[1].values.title"
+msgid "Отчет"
+msgstr "Отчет"

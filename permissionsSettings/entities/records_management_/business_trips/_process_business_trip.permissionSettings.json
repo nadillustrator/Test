@@ -1,0 +1,12 @@
+{
+  "Namespace": "records_management_.business_trips",
+  "Code": "_process_business_trip",
+  "settings": {
+    "accessType": "none",
+    "__permissions": {
+      "inheritParent": false,
+      "values": []
+    }
+  },
+  "groups": []
+}

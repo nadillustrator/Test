@@ -1,0 +1,38 @@
+{
+  "__id": "2cf99d4e-8fda-5fb3-ad72-d1ab2604aa90",
+  "name": "Командировки",
+  "namespace": "records_management_",
+  "code": "business_trips",
+  "type": "APPLICATION",
+  "icon": "vehicle_plane",
+  "sort": 1,
+  "system": false,
+  "hidden": false,
+  "data": {
+    "openInNewTab": false,
+    "widgets": [
+      {
+        "type": "appview",
+        "customWidgetId": "",
+        "template": null,
+        "data": {
+          "pageCode": "business_trips",
+          "namespaceCode": "records_management_"
+        }
+      }
+    ],
+    "menu": {
+      "type": "namespace"
+    },
+    "layout": "tiles"
+  },
+  "recoveryWithParent": false,
+  "navigation": null,
+  "__createdAt": "2022-09-13T07:06:56.034652191Z",
+  "__updatedAt": "2022-09-13T07:06:56.353614365Z",
+  "__deletedAt": null,
+  "__createdBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__updatedBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "editions": null,
+  "solution": "saas"
+}

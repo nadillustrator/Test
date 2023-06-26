@@ -1,0 +1,26 @@
+{
+  "number": 1,
+  "Service": "main.serials",
+  "entities": [
+    {
+      "name": "Командировки",
+      "kind": "serial",
+      "path": "entities/records_management_/business_trips/__default.json",
+      "description": "",
+      "namespace": "records_management_.business_trips",
+      "code": "__default",
+      "history": null,
+      "resources": null
+    },
+    {
+      "name": "График отсутствий",
+      "kind": "serial",
+      "path": "entities/records_management_/absence/__default.json",
+      "description": "",
+      "namespace": "records_management_.absence",
+      "code": "__default",
+      "history": null,
+      "resources": null
+    }
+  ]
+}

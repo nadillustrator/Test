@@ -1,0 +1,19 @@
+{
+  "__id": "2cf99d4e-8fda-5fb3-ad72-d1ab2604aa90",
+  "namespace": "records_management_.business_trips",
+  "code": "__default",
+  "version": 1,
+  "name": "Командировки",
+  "nextValue": 9,
+  "settings": {
+    "useReleased": true,
+    "iterationStep": 1,
+    "sequence": true
+  },
+  "apps": null,
+  "__createdAt": "2022-09-13T07:06:56.034652Z",
+  "__updatedAt": "2022-09-13T07:06:56.034652Z",
+  "__deletedAt": null,
+  "__createdBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a",
+  "__updatedBy": "d4814328-6c2d-4312-91b9-ec5b5a3d9a6a"
+}

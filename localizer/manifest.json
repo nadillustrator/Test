@@ -1,0 +1,16 @@
+{
+  "number": 1,
+  "Service": "localizer",
+  "entities": [
+    {
+      "name": "Translations",
+      "kind": "localization",
+      "path": "entities/records_management_/localization.json",
+      "description": "",
+      "namespace": "records_management_",
+      "code": "",
+      "history": null,
+      "resources": null
+    }
+  ]
+}
